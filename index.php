@@ -9,7 +9,7 @@
  * @copyright  2017 Brendon Hutchins
  * @license    MIT License
  * @version    2.0
- * @Date       2017   
+ * @Date       2017
  */
 ?>
 
@@ -31,7 +31,7 @@ spl_autoload_register(function($class)
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <style>
-            @import "css/index.css";
+            @import "stylesheets/css/index.css";
         </style>
         <script type="text/javascript" src="button.js">
         </script>
@@ -45,15 +45,15 @@ spl_autoload_register(function($class)
             <input type="text" size="33">
           </form>
       </li>
- <?php echo "<h1>CSC-Utils: " . $ldapServer ."</h1>"; 
-      
+ <?php echo "<h1>CSC-Utils: " . $ldapServer ."</h1>";
+
   ?>
     <ul>
       <li><a href="index.php">Home</a></li>
       <li><a href="index.php">Add User</a></li>
       <li><a href="index.php">Remove User</a></li>
       <li><a href="index.php">Reports</a></li>
-    </ul>  
+    </ul>
 </nav>
 <!-- Main Content of Page -->
 
@@ -89,8 +89,8 @@ function ldapGetEntries($ldapConnection, $ldapBaseDN, $searchObjectFilter)
   $result = ldap_search($ldapConnection, $ldapBaseDN, $searchObjectFilter);
   $entries = ldap_get_entries($ldapConnection, $result);
 
-  for ($i= 0; $i < $entries['count']; $i++) 
-  { 
+  for ($i= 0; $i < $entries['count']; $i++)
+  {
     echo $entries[$i]['cn'][0]. "<br>";
     echo $entries[$i]['description'][0]. "<br>";
     echo $entries[$i]['info'][0]. "<br>";
@@ -102,7 +102,7 @@ function ldapGetEntries($ldapConnection, $ldapBaseDN, $searchObjectFilter)
 $arrayName = array("Name", "Description", "Owner", "Owner Email");
 $arrayData = array("Bob", "HR Officer", "HR", "email@example.com");
 
-$Mktable = new TableClass(); 
+$Mktable = new TableClass();
 
 
 $Mktable->head($arrayName);
@@ -135,13 +135,13 @@ function mysqlDatabaseConnection()
 $serverName = "localhost";
 $userNmae = "admin";
 $password = "Password1";
-$dbName = "database1"; 
+$dbName = "database1";
 
 //create the database connection
 
 $mysqlConnection = new mysqli($serverName, $username, $password);
 
-if ($mysqlDatabaseConnection->connect_error) 
+if ($mysqlDatabaseConnection->connect_error)
   {
     die("Connection failed: " . $mysqlDatabaseConnection->connect_error);
   }

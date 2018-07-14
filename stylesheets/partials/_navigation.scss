@@ -1,0 +1,22 @@
+$banner-color: #1E90FF;
+
+nav{
+  background-color: $banner-color;
+  margin: 10;
+  overflow: hidden;
+}
+
+form.searchbox{
+position: fixed;
+padding-top: 4em;
+left: 80%;
+}
+
+nav ul li {
+  display: inline-block;
+  list-style-type: none;
+}
+
+nav ul li a {
+  padding: 0.5em 0.5em;
+}

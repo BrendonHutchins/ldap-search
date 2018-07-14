@@ -1,0 +1,53 @@
+// Variables
+
+//Fonts
+$font-stack: 'Courier New', Courier, 'Lucida Sans Typewriter','Lucida Typewriter', monospace;;
+
+$main-font-size: 12px;
+
+//Colours
+$primary-bg-colour: lightGrey;
+$navigation-bg-colour: #1E90FF;
+$header-bg-colour: 1E90FF;
+/*
+Header
+
+Main content
+
+Footer
+
+Article
+
+Nav
+*/
+@import '../partials/navigation';
+@import '../partials/article';
+
+
+body {
+
+font: 100% font-stack;
+font-size: $main-font-size;
+margin: 0;
+padding: 0;
+color: primary-colour;
+background-color: $primary-bg-colour;
+}
+
+
+nav {
+
+	header{}
+
+	ul li {}
+
+	ul li a {}
+
+	footer {}
+
+
+}
+
+form {}
+
+div.content{}
